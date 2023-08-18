@@ -116,8 +116,7 @@ let serv = ScrollReveal({
 serv.reveal(".services-info .sub-heading", { origin: "left", delay: 100 });
 serv.reveal(".services-info .heading", { origin: "right", delay: 200 });
 serv.reveal(".services-info .text", { origin: "top", delay: 300 });
-serv.reveal(".ml .numbers", { origin: "bottom", delay: 400 });
-serv.reveal(".ml h5", { origin: "left", delay: 100 });
+serv.reveal(".ml h5", { origin: "bottom", delay: 400 });
 serv.reveal(".cta ", { origin: "bottom", delay: 200 });
 serv.reveal(".srv-card", { origin: "right", delay: 200 });
 serv.reveal(".card-desc h3", { origin: "top", delay: 300 });
