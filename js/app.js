@@ -43,6 +43,7 @@ function stickyNavbar() {
 }
 stickyNavbar();
 window.addEventListener("scroll", stickyNavbar);
+
 /* --------------- Reveal Animation --------------- */
 let nav = ScrollReveal({
     duration: 2500,
