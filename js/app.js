@@ -77,7 +77,6 @@ let por = ScrollReveal({
 por.reveal(".prt-card", { origin: "left", delay: 300 });
 por.reveal(".prt-desc h3", { origin: "left", delay: 300 });
 por.reveal(".prt-desc .btn", { origin: "right", delay: 300 });
-por.reveal(".prt-image img", { origin: "top", delay: 100 });
 por.reveal(".filter-btn", { origin: "right", delay: 400 });
 por.reveal(".portfolio-title .sub-heading", { origin: "left", delay: 100 });
 por.reveal(".portfolio-title .heading", { origin: "right", delay: 200 });
