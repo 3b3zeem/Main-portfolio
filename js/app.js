@@ -37,6 +37,8 @@ function updateCount(num, maxNum) {
     }
 }
 
+
+
 /* --------------- Sticky Navbar --------------- */
 function stickyNavbar() {
     header.classList.toggle("scrolled", window.pageYOffset > 0);
@@ -81,6 +83,7 @@ por.reveal(".pot4", { origin: "left", delay: 400 });
 por.reveal(".pot5", { origin: "bottom", delay: 500 });
 por.reveal(".pot6", { origin: "right", delay: 600 });
 por.reveal(".pot7", { origin: "right", delay: 700 });
+por.reveal(".pot8", { origin: "top", delay: 800 });
 por.reveal(".prt-desc h3", { origin: "left", delay: 300 });
 por.reveal(".prt-desc .btn", { origin: "right", delay: 300 });
 por.reveal(".filter-btn", { origin: "right", delay: 400 });
@@ -363,14 +366,3 @@ let calcScrollValue = () => {
 
 window.onscroll = calcScrollValue;
 window.onload = calcScrollValue;
-
-$(document).ready(function () {
-    $(".cont").each(function () {
-        var $topElement = $(this).find(".top");
-        var $botElement = $(this).find(".bot");
-
-        $topElement.click(function () {
-            $botElement.slideToggle("slow");
-        });
-    });
-});
