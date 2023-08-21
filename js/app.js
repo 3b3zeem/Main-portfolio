@@ -74,7 +74,13 @@ let por = ScrollReveal({
     distance: "60px",
     scale: 0.85,
 });
-por.reveal(".prt-card", { origin: "left", delay: 300 });
+por.reveal(".pot1", { origin: "left", delay: 100 });
+por.reveal(".pot2", { origin: "top", delay: 200 });
+por.reveal(".pot3", { origin: "right", delay: 300 });
+por.reveal(".pot4", { origin: "left", delay: 400 });
+por.reveal(".pot5", { origin: "bottom", delay: 500 });
+por.reveal(".pot6", { origin: "right", delay: 600 });
+por.reveal(".pot7", { origin: "right", delay: 700 });
 por.reveal(".prt-desc h3", { origin: "left", delay: 300 });
 por.reveal(".prt-desc .btn", { origin: "right", delay: 300 });
 por.reveal(".filter-btn", { origin: "right", delay: 400 });
@@ -103,7 +109,10 @@ skills.reveal(".skills-box .sub-heading", { origin: "left", delay: 100 });
 skills.reveal(".skills-box .heading", { origin: "right", delay: 200 });
 skills.reveal(".skills-box .text", { origin: "top", delay: 300 });
 skills.reveal(".skills-box .btn", { origin: "bottom", delay: 400 });
-skills.reveal(".skills-wrap .skill ", { origin: "left", delay: 100 });
+skills.reveal(".skills-wrap .sk1", { origin: "left", delay: 100 });
+skills.reveal(".skills-wrap .sk2", { origin: "top", delay: 200 });
+skills.reveal(".skills-wrap .sk3", { origin: "bottom", delay: 300 });
+skills.reveal(".skills-wrap .sk4", { origin: "right", delay: 400 });
 skills.reveal(".skills .dots ", { origin: "top", delay: 200 });
 skills.reveal(".skills .square ", { origin: "bottom", delay: 200 });
 
