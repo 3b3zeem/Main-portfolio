@@ -85,6 +85,7 @@ por.reveal(".pot5", { origin: "bottom", delay: 500 });
 por.reveal(".pot6", { origin: "right", delay: 600 });
 por.reveal(".pot7", { origin: "right", delay: 700 });
 por.reveal(".pot8", { origin: "top", delay: 800 });
+por.reveal(".pot9", { origin: "left", delay: 800 });
 por.reveal(".prt-desc h3", { origin: "left", delay: 300 });
 por.reveal(".prt-desc .btn", { origin: "right", delay: 300 });
 por.reveal(".filter-btn", { origin: "right", delay: 400 });
@@ -162,6 +163,7 @@ cont.reveal(".contact-form", { origin: "right", delay: 500 });
 cont.reveal(".contact-form .form-input", { origin: "top", delay: 600 });
 cont.reveal(".contact-form textarea", { origin: "bottom", delay: 600 });
 cont.reveal(".contact-form .btn", { origin: "left", delay: 800 });
+cont.reveal(".container-card", { origin: "left", delay: 800 });
 
 let supe = ScrollReveal({
     duration: 2500,
@@ -391,6 +393,10 @@ function consoleText(words, id, colors) {
         }
     }, 400)
 }
+
+document.getElementById("cardBtn").addEventListener("click", ()=> {
+    document.getElementById("container").classList.toggle("change")
+})
 
 /* --------------- Scroll top --------------- */
 
