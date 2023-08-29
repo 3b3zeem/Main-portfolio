@@ -86,6 +86,7 @@ por.reveal(".pot6", { origin: "right", delay: 600 });
 por.reveal(".pot7", { origin: "right", delay: 700 });
 por.reveal(".pot8", { origin: "top", delay: 800 });
 por.reveal(".pot9", { origin: "left", delay: 800 });
+por.reveal(".pot10", { origin: "bottom", delay: 800 });
 por.reveal(".prt-desc h3", { origin: "left", delay: 300 });
 por.reveal(".prt-desc .btn", { origin: "right", delay: 300 });
 por.reveal(".filter-btn", { origin: "right", delay: 400 });
