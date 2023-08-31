@@ -38,7 +38,6 @@ function updateCount(num, maxNum) {
 }
 
 
-
 /* --------------- Sticky Navbar --------------- */
 function stickyNavbar() {
     header.classList.toggle("scrolled", window.pageYOffset > 0);
@@ -280,6 +279,8 @@ next_btn.addEventListener("click", () => {
     ChangeImage(currentIndex);
 });
 
+
+/* --------------- testimonials Animation --------------- */
 const progressCircle = document.querySelector(".autoplay-progress svg");
 const progressContent = document.querySelector(".autoplay-progress span");
 var swiper = new Swiper(".swiper", {
@@ -364,6 +365,33 @@ links.forEach((links) =>
     })
 );
 
+/* --------------- Scroll top --------------- */
+let calcScrollValue = () => {
+    let scrollProgress = document.getElementById("progress");
+    let progressValue = document.getElementById("progress-value");
+    let pos = document.documentElement.scrollTop;
+    let calcHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+    let scrollValue = Math.round((pos * 100) / calcHeight);
+    console.log(scrollValue);
+
+    if (pos > 100) {
+        scrollProgress.style.display = "grid";
+    } else {
+        scrollProgress.style.display = "none";
+    }
+
+    scrollProgress.addEventListener("click", () => {
+        document.documentElement.scrollTop = 0;
+    });
+
+    scrollProgress.style.background = `conic-gradient(hsl(var(--hue-1), 100%, 60%) ${scrollValue}% , #d7d7d7 ${scrollValue}%)`;
+};
+
+window.onscroll = calcScrollValue;
+window.onload = calcScrollValue;
+
 // function([string1, string2],target id,[color1,color2])    
 consoleText(['I am a freelancer web developer.', 'Student at SU.', 'Software Engineer.'], 'text', ['hsl(var(--hue-1), 17%, 63%)', 'rhsl(var(--hue-1), 17%, 63%)', 'hsl(var(--hue-1), 17%, 63%)']);
 
@@ -419,31 +447,3 @@ function consoleText(words, id, colors) {
 document.getElementById("cardBtn").addEventListener("click", () => {
     document.getElementById("container").classList.toggle("change")
 })
-
-/* --------------- Scroll top --------------- */
-
-let calcScrollValue = () => {
-    let scrollProgress = document.getElementById("progress");
-    let progressValue = document.getElementById("progress-value");
-    let pos = document.documentElement.scrollTop;
-    let calcHeight =
-        document.documentElement.scrollHeight -
-        document.documentElement.clientHeight;
-    let scrollValue = Math.round((pos * 100) / calcHeight);
-    console.log(scrollValue);
-
-    if (pos > 100) {
-        scrollProgress.style.display = "grid";
-    } else {
-        scrollProgress.style.display = "none";
-    }
-
-    scrollProgress.addEventListener("click", () => {
-        document.documentElement.scrollTop = 0;
-    });
-
-    scrollProgress.style.background = `conic-gradient(hsl(var(--hue-1), 100%, 60%) ${scrollValue}% , #d7d7d7 ${scrollValue}%)`;
-};
-
-window.onscroll = calcScrollValue;
-window.onload = calcScrollValue;
