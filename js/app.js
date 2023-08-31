@@ -63,7 +63,7 @@ let sr = ScrollReveal({
     scale: 0.85,
 });
 sr.reveal(".showcase-info", { delay: 300 });
-sr.reveal(".showcase-info .console-container", { origin: "bottom" , delay: 300 });
+sr.reveal(".showcase-info .console-container", { origin: "bottom", delay: 300 });
 sr.reveal(".showcase-info .sub-heading", { origin: "bottom", delay: 400 });
 sr.reveal(".showcase-info .heading", { origin: "bottom", delay: 500 });
 sr.reveal(".showcase-info .text", { origin: "bottom", delay: 600 });
@@ -280,14 +280,35 @@ next_btn.addEventListener("click", () => {
     ChangeImage(currentIndex);
 });
 
-const swiper = new Swiper(".swiper", {
+const progressCircle = document.querySelector(".autoplay-progress svg");
+const progressContent = document.querySelector(".autoplay-progress span");
+var swiper = new Swiper(".swiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    centeredSlides: true,
     loop: true,
-    speed: 500,
-    autoplay: true,
-
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+    },
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false
+    },
     pagination: {
         el: ".swiper-pagination",
-        clickable: true,
+        clickable: true
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
     },
 });
 
@@ -395,7 +416,7 @@ function consoleText(words, id, colors) {
     }, 400)
 }
 
-document.getElementById("cardBtn").addEventListener("click", ()=> {
+document.getElementById("cardBtn").addEventListener("click", () => {
     document.getElementById("container").classList.toggle("change")
 })
 
