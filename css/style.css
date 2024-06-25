@@ -511,7 +511,7 @@ body.open .hamburger .bar:last-child {
 
 .showcase-image .person {
   position: absolute;
-  width: 110%;
+  width: 100%;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -672,7 +672,7 @@ body.open .hamburger .bar:last-child {
 
 .skills-wrap {
   display: grid;
-  grid-template-columns: repeat(4, 150px);
+  grid-template-columns: repeat(5, 150px);
   margin-top: 2rem;
   justify-content: space-between;
 }
